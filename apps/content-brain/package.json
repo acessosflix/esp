@@ -1,0 +1,6 @@
+{
+  "name": "@cognilingua/content-brain",
+  "version": "1.0.0",
+  "description": "Content Brain microservice for CogniLingua",
+  "main": "dist/main.js"
+}
