@@ -1,8 +1,8 @@
 import {
   Controller,
   Post,
+  Get,
   Body,
-  BadRequestException,
   HttpCode,
   HttpStatus,
   Inject,
@@ -62,17 +62,6 @@ export class LearningController {
   @Post('webhook/lesson-complete')
   @HttpCode(HttpStatus.OK)
   async handleLessonComplete(@Body() payload: LessonCompleteDto) {
-    // Validate payload
-    if (!payload.studentId || !payload.conceptId) {
-      throw new BadRequestException(
-        'studentId and conceptId are required fields',
-      );
-    }
-
-    if (typeof payload.success !== 'boolean') {
-      throw new BadRequestException('success must be a boolean value');
-    }
-
     // Prepare event data
     const eventData = {
       studentId: payload.studentId,
@@ -102,7 +91,7 @@ export class LearningController {
    * 
    * @returns Health status
    */
-  @Post('health')
+  @Get('health')
   @HttpCode(HttpStatus.OK)
   getHealth() {
     return {
