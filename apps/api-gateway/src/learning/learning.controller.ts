@@ -43,7 +43,7 @@ export class LessonCompleteDto {
   success: boolean;
 
   /**
-   * Score achieved (0-1 or 0-100)
+   * Score achieved (0-100)
    */
   @IsNumber()
   score: number;

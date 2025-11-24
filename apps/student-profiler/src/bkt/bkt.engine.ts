@@ -145,10 +145,20 @@ export class BktEngine {
     responses: boolean[],
   ): BktUpdateResult {
     let currentMastery = initialMastery;
+    
+    // Handle empty responses array
+    if (responses.length === 0) {
+      return {
+        probabilityOfMastery: currentMastery,
+        isMastered: currentMastery >= 0.95,
+        correctResponse: false, // No response to report
+      };
+    }
+
     let lastResult: BktUpdateResult = {
       probabilityOfMastery: currentMastery,
       isMastered: currentMastery >= 0.95,
-      correctResponse: false,
+      correctResponse: responses[0],
     };
 
     for (const response of responses) {
