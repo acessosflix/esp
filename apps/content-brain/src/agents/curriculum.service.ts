@@ -3,7 +3,6 @@ import { ConfigService } from '@nestjs/config';
 import * as neo4j from 'neo4j-driver';
 import { 
   StudentProfile, 
-  ConceptState, 
   NextLessonRecommendation 
 } from '@cognilingua/shared';
 
