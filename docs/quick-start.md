@@ -20,6 +20,8 @@ git clone https://github.com/acessosflix/esp.git
 cd esp
 ```
 
+> **Note**: O diretório do projeto se chama `esp` mas o nome do produto é **CogniLingua** (Ecossistema de Aprendizado Adaptativo).
+
 ### 2. Instalar Dependências
 
 ```bash

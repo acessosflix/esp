@@ -82,8 +82,12 @@ export class BKTEngine {
         pCorrectIfLearned * pLearned + 
         pCorrectIfNotLearned * (1 - pLearned);
 
-      newPLearned = 
-        (pCorrectIfLearned * pLearned) / pCorrect;
+      // Guard against division by zero
+      if (pCorrect > 0) {
+        newPLearned = (pCorrectIfLearned * pLearned) / pCorrect;
+      } else {
+        newPLearned = pLearned; // Keep current probability if denominator is 0
+      }
 
     } else {
       // Student answered incorrectly
@@ -94,8 +98,12 @@ export class BKTEngine {
         pIncorrectIfLearned * pLearned + 
         pIncorrectIfNotLearned * (1 - pLearned);
 
-      newPLearned = 
-        (pIncorrectIfLearned * pLearned) / pIncorrect;
+      // Guard against division by zero
+      if (pIncorrect > 0) {
+        newPLearned = (pIncorrectIfLearned * pLearned) / pIncorrect;
+      } else {
+        newPLearned = pLearned; // Keep current probability if denominator is 0
+      }
     }
 
     // Apply learning opportunity (transition probability)

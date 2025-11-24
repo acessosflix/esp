@@ -219,6 +219,18 @@ export class LearningController {
     averageTime: number;
   } {
     const totalCount = exercises.length;
+    
+    // Guard against division by zero
+    if (totalCount === 0) {
+      return {
+        totalCount: 0,
+        correctCount: 0,
+        incorrectCount: 0,
+        percentage: 0,
+        averageTime: 0
+      };
+    }
+    
     const correctCount = exercises.filter(ex => ex.correct).length;
     const incorrectCount = totalCount - correctCount;
     const percentage = (correctCount / totalCount) * 100;

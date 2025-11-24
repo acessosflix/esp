@@ -12,6 +12,9 @@
     "baseUrl": "./",
     "incremental": true,
     "skipLibCheck": true,
+    // TODO: Enable strict mode for production
+    // These are temporarily disabled for initial scaffolding to reduce boilerplate
+    // Plan to enable incrementally: strictNullChecks -> strictBindCallApply -> noImplicitAny
     "strictNullChecks": false,
     "noImplicitAny": false,
     "strictBindCallApply": false,
