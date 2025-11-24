@@ -1,0 +1,6 @@
+{
+  "name": "student-profiler",
+  "version": "1.0.0",
+  "description": "Student Profiler microservice for CogniLingua",
+  "main": "src/main.ts"
+}
