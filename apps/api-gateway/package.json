@@ -1,0 +1,6 @@
+{
+  "name": "@cognilingua/api-gateway",
+  "version": "1.0.0",
+  "description": "API Gateway for CogniLingua",
+  "main": "dist/main.js"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "@cognilingua/shared",
+  "version": "1.0.0",
+  "description": "Shared types and interfaces for CogniLingua",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts"
+}
