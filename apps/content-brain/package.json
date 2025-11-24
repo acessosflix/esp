@@ -1,0 +1,6 @@
+{
+  "name": "content-brain",
+  "version": "0.0.1",
+  "description": "Content Brain microservice for CogniLingua",
+  "main": "src/main.ts"
+}

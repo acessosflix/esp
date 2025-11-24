@@ -1,0 +1,6 @@
+{
+  "name": "@cognilingua/shared",
+  "version": "0.0.1",
+  "description": "Shared libraries and interfaces for CogniLingua",
+  "main": "src/index.ts"
+}
